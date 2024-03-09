@@ -52,7 +52,10 @@ const createSongCard = (songData) => {
   };
 
   // Create elements to display song information
-  displayObject(songData, songInfo);
+  if(songData.hasOwnProperty('data')) {
+    displayObject(songData.data[0], songInfo);
+}
+  /* displayObject(songData, songInfo); */
    
 }
 
